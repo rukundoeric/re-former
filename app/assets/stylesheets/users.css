@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+label {
+  outline: none;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .form-content {
+  width: 300px;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 5px #979797;
+          box-shadow: 0 0 5px #979797;
+}
+
+.container .form-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .form-content form label {
+  font-size: 17px;
+}
+
+.container .form-content form input {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.container .form-content form input[type="text"],
+.container .form-content form input[type="email"],
+.container .form-content form input[type="password"] {
+  height: 30px;
+}
+
+.container .form-content form input[type="submit"] {
+  border: 0;
+  background-color: #374ece;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.container .form-content .errors {
+  border-radius: 5px;
+  background-color: #ff5b5b;
+  padding: 10px;
+}
+
+.container .form-content .errors ul,
+.container .form-content .errors li,
+.container .form-content .errors span {
+  color: white;
+}
+
+.container .form-content .errors ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/*# sourceMappingURL=users.css.map */
