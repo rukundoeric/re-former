@@ -1,0 +1,46 @@
+<% 
+=begin %>
+<form accept-charset="UTF-8" action="/users" method="post">
+   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+   <label for="username">Username:</label>
+   <input type="text" id="username" name="user[username]"/>
+   <label for="email">Email:</label>
+   <input type="email" id="email" name="user[email]"/>
+   <label for="password">Password:</label>
+   <input type="password" id="password" name="user[password]"/>
+   <input type="submit" value="Create"/>
+</form>
+<% 
+=end %>
+<%
+=begin %>
+<%= form_tag('/users') do %>
+   <%= label_tag(:username, "Username:") %>
+   <%= text_field_tag(:username) %>
+   <%= label_tag(:email, "Email:") %>
+   <%= email_field_tag(:email) %>
+   <%= label_tag(:password, "Password:") %>
+   <%= password_field_tag(:password) %>
+   <%= submit_tag("Create") %>
+<% end %>
+<%
+=end
+%>
+
+<div class="container">
+  <div class="form-content">
+    <%= form_for @user do |f| %>
+      <%= f.label :username, "Username:" %>
+      <%= f.text_field :username, placeholder: "Enter the username", class: '' %><br />
+      <%= f.label :email, "Email:" %>
+      <%= f.email_field :email, placeholder: "example@example.com", class: '' %><br />
+      <%= f.label :password, "Password:", placeholder: 'xxxxxxx' %>
+      <%= f.password_field :password %><br />
+      <%= f.submit %>
+    <% end %>
+
+    <% if @user.errors.any? %>
+      <%= render partial: 'error' %>
+    <% end %>
+  </div> 
+</div>
